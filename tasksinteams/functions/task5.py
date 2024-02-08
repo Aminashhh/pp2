@@ -5,7 +5,9 @@ def find_common_elements(list1, list2):
             newlist.append(i)
     print(newlist)
 
-list1 = [12,13,14,15]
-list2 = [12,13,16,17]
+list1_input = input(" ")
+list2_input = input(" ")
+list1 = [int(x) for x in list1_input.split()]
+list2 = [int(x) for x in list2_input.split()]
 find_common_elements(list1,list2)
     

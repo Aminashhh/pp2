@@ -1,0 +1,158 @@
+/* Основные стили контейнера */
+.auth-container {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  box-shadow: 0 5px 20px rgba(232, 62, 140, 0.15); /* Розовый оттенок в тени */
+  border-radius: 12px;
+  background: white;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+/* Заголовок формы */
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: #e83e8c; /* Розовый акцент */
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Группы полей формы */
+.auth-container .form-group {
+  margin-bottom: 1.6rem;
+  position: relative;
+}
+
+.auth-container .form-group label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  color: #5a3d5a; /* Темно-фиолетовый вместо серого */
+  font-size: 0.95rem;
+}
+
+.auth-container .form-group input {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid #f0d6e8; /* Светло-розовая граница */
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff9fc; /* Очень светлый розовый фон */
+}
+
+.auth-container .form-group input:focus {
+  outline: none;
+  border-color: #e83e8c; /* Розовый акцент */
+  box-shadow: 0 0 0 3px rgba(232, 62, 140, 0.1);
+}
+
+/* Стили для невалидных полей */
+.auth-container .form-group input.ng-invalid.ng-touched {
+  border-color: #ff6b81;
+  background-color: #fff6f7;
+}
+
+/* Кнопка регистрации */
+.auth-container button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #e83e8c; /* Розовый акцент */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.auth-container button:hover:not(:disabled) {
+  background-color: #d42d7b; /* Темнее розовый */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 62, 140, 0.2);
+}
+
+.auth-container button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-container button:disabled {
+  background-color: #f8bbd0; /* Светло-розовый */
+  cursor: not-allowed;
+}
+
+/* Футер формы */
+.auth-container .auth-footer {
+  text-align: center;
+  margin-top: 1.8rem;
+  color: #8e7d8e; /* Приглушенный фиолетовый */
+  font-size: 0.95rem;
+}
+
+.auth-container .auth-footer a {
+  color: #e83e8c; /* Розовый акцент */
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.auth-container .auth-footer a:hover {
+  color: #d42d7b;
+  background-color: #fce4ec; /* Светло-розовый фон */
+  text-decoration: none;
+}
+
+/* Сообщения об ошибках */
+.error-message {
+  color: #ff4757;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  padding-left: 0.3rem;
+}
+
+/* Индикатор загрузки */
+.loader {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .auth-container {
+    margin: 1.2rem;
+    padding: 1.8rem;
+    box-shadow: 0 2px 10px rgba(232, 62, 140, 0.1);
+  }
+  
+  .auth-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-container .form-group input {
+    padding: 0.75rem;
+  }
+  
+  .auth-container button {
+    padding: 0.8rem;
+  }
+}

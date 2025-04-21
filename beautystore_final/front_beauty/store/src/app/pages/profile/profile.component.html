@@ -1,0 +1,83 @@
+<div class="profile-container">
+    <app-navigation></app-navigation>
+  
+    <section class="profile-section">
+      <div class="profile-card">
+        <!-- Заголовок профиля -->
+        <div class="profile-header">
+          <img [src]="user?.avatar || 'assets/images/default-avatar.png'" 
+               alt="Фото профиля" 
+               class="profile-img">
+          <h2 class="profile-name">{{ user?.name || 'Пользователь' }}</h2>
+          <p class="profile-email">{{ user?.email }}</p>
+        </div>
+  
+        <!-- Основная информация -->
+        <div class="profile-info">
+          <div class="info-item">
+            <strong>Дата регистрации:</strong>
+            <span>{{ user?.createdAt | date:'dd.MM.yyyy' }}</span>
+          </div>
+          
+          <div class="info-item">
+            <strong>Телефон:</strong>
+            <span>{{ user?.phone || 'Не указан' }}</span>
+          </div>
+          
+          <div class="info-item">
+            <strong>Адрес:</strong>
+            <span>{{ user?.address || 'Не указан' }}</span>
+          </div>
+        </div>
+  
+        <!-- Статистика покупок -->
+        <div class="profile-stats">
+          <h3>Ваша статистика</h3>
+          
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value">{{ orderCount }}</div>
+              <div class="stat-label">Всего заказов</div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-value">{{ loyaltyPoints }}</div>
+              <div class="stat-label">Бонусных баллов</div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-value">{{ favoriteProductsCount }}</div>
+              <div class="stat-label">Избранных товаров</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- История заказов (краткий просмотр) -->
+        <div class="recent-orders" *ngIf="recentOrders.length > 0">
+          <h3>Последние заказы</h3>
+          <div class="order-list">
+            <div class="order-item" *ngFor="let order of recentOrders">
+              <div class="order-date">{{ order.date | date:'dd.MM.yyyy' }}</div>
+              <div class="order-total">{{ order.total | currency:'₸':'symbol':'1.0-0' }}</div>
+              <div class="order-status" [class]="'status-' + order.status">
+                {{ getStatusText(order.status) }}
+              </div>
+            </div>
+          </div>
+          <a routerLink="/orders" class="view-all">Все заказы →</a>
+        </div>
+  
+        <!-- Кнопки действий -->
+        <div class="profile-actions">
+          <button class="btn btn-edit" routerLink="/profile/edit">
+            Редактировать профиль
+          </button>
+          <button class="btn btn-logout" (click)="logout()">
+            Выйти из аккаунта
+          </button>
+        </div>
+      </div>
+    </section>
+  
+    <app-footer></app-footer>
+  </div>

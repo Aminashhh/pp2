@@ -1,0 +1,13 @@
+<div class="sales-container">
+    <h2 class="section-title">АКЦИИ</h2>
+  
+    <div class="promotions-grid">
+      <div class="promotion-card" *ngFor="let promo of promotions">
+        <div class="promo-image">
+          <img [src]="promo.imageUrl" [alt]="promo.title" />
+        </div>
+        <div class="promo-title">{{ promo.title }}</div>
+      </div>
+    </div>
+  </div>
+  

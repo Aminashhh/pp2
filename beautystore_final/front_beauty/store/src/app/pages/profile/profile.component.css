@@ -1,0 +1,315 @@
+/* Основные стили профиля */
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  
+  /* Карточка профиля */
+  .profile-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(232, 62, 140, 0.12);
+    padding: 2.5rem;
+    margin-top: 1.5rem;
+    border: 1px solid #f8e1eb;
+  }
+  
+  /* Шапка профиля */
+  .profile-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+  
+  .profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 15px rgba(232, 62, 140, 0.2);
+    margin-bottom: 1.2rem;
+    background-color: #fff9fc;
+  }
+  
+  .profile-name {
+    font-size: 1.8rem;
+    color: #e83e8c;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .profile-email {
+    color: #8e7d8e;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  /* Информация о пользователе */
+  .profile-info {
+    background: #fff9fc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid #f0d6e8;
+  }
+  
+  .info-item {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .info-item strong {
+    min-width: 150px;
+    color: #5a3d5a;
+    font-weight: 500;
+  }
+  
+  /* Статистика */
+  .profile-stats {
+    margin-bottom: 2.5rem;
+  }
+  
+  .profile-stats h3 {
+    color: #5a3d5a;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0d6e8;
+    font-weight: 600;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .stat-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(232, 62, 140, 0.08);
+    border: 1px solid #f8e1eb;
+    transition: transform 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e83e8c;
+    margin-bottom: 0.3rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: #8e7d8e;
+    font-weight: 500;
+  }
+  
+  /* Последние заказы */
+  .recent-orders {
+    margin-bottom: 2.5rem;
+  }
+  
+  .recent-orders h3 {
+    color: #5a3d5a;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0d6e8;
+    font-weight: 600;
+  }
+  
+  .order-list {
+    border: 1px solid #f0d6e8;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-bottom: 1px solid #f0d6e8;
+    align-items: center;
+    transition: background 0.2s ease;
+  }
+  
+  .order-item:last-child {
+    border-bottom: none;
+  }
+  
+  .order-item:hover {
+    background: #fff9fc;
+  }
+  
+  .order-date {
+    color: #6b7280;
+    font-size: 0.95rem;
+  }
+  
+  .order-total {
+    font-weight: 600;
+    color: #5a3d5a;
+  }
+  
+  .order-status {
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .status-completed {
+    background: #e6f7ee;
+    color: #10b981;
+  }
+  
+  .status-pending {
+    background: #fff4e6;
+    color: #f59e0b;
+  }
+  
+  .status-cancelled {
+    background: #fee2e2;
+    color: #ef4444;
+  }
+  
+  .view-all {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #e83e8c;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  
+  .view-all:hover {
+    color: #d42d7b;
+    text-decoration: underline;
+  }
+  
+  /* Кнопки действий */
+  .profile-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 0.9rem 1.8rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .btn-edit {
+    background: #e83e8c;
+    color: white;
+    box-shadow: 0 4px 12px rgba(232, 62, 140, 0.25);
+  }
+  
+  .btn-edit:hover {
+    background: #d42d7b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(232, 62, 140, 0.3);
+  }
+  
+  .btn-edit:active {
+    transform: translateY(0);
+  }
+  
+  .btn-logout {
+    background: white;
+    color: #e83e8c;
+    border: 1px solid #e83e8c;
+  }
+  
+  .btn-logout:hover {
+    background: #fff9fc;
+    border-color: #d42d7b;
+    color: #d42d7b;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .profile-card {
+      padding: 1.5rem;
+    }
+    
+    .profile-img {
+      width: 110px;
+      height: 110px;
+    }
+    
+    .profile-name {
+      font-size: 1.5rem;
+    }
+    
+    .info-item {
+      flex-direction: column;
+    }
+    
+    .info-item strong {
+      min-width: auto;
+      margin-bottom: 0.3rem;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .order-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .profile-actions {
+      flex-direction: column;
+    }
+    
+    .btn {
+      width: 100%;
+    }
+  }
+  
+  /* Анимации */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .profile-card {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  /* Иконки (если будут добавлены) */
+  .icon {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+  }

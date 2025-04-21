@@ -1,0 +1,52 @@
+.sales-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(173, 216, 230, 0.15);
+    backdrop-filter: blur(3px);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .promotion-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+    text-align: center;
+  }
+  
+  .promotion-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .promo-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .promo-title {
+    padding: 10px;
+    background: #000;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  

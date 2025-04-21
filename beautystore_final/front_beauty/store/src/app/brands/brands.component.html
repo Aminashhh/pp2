@@ -1,0 +1,13 @@
+<div class="brands-list">
+    <div class="brands-columns">
+      <div class="brands-column" *ngFor="let letter of alphabet">
+        <h2>{{ letter }}</h2>
+        <div class="brands-group">
+          <a *ngFor="let brand of brandsByLetter[letter]" class="brand-link" href="#">
+            {{ brand }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

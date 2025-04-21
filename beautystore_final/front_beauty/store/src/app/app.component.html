@@ -1,0 +1,28 @@
+<div class="app-container">
+  <!-- Шапка с логотипом -->
+  <header class="app-header">
+    <h1 class="logo">SAA BEAUTYSTORE</h1>
+  </header>
+
+  <!-- Основная навигация -->
+  <nav class="main-nav">
+    <a routerLink="/" routerLinkActive="active">Главная</a>
+    <a routerLink="/brands" routerLinkActive="active">Бренды</a>
+    <a routerLink="/new-arrivals" routerLinkActive="active">Новинки</a>
+    <a routerLink="/sales" routerLinkActive="active">Акции</a>
+    <a routerLink="/gifts" routerLinkActive="active">Подарки</a>
+  </nav>
+
+  <!-- Компонент хедера (если он нужен) -->
+  <app-header></app-header>
+
+  <!-- Основная область контента -->
+  <main class="content-area">
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="app-footer">
+    <p>© 2023 Магазин косметики. Все права защищены.</p>
+  </footer>
+</div>
